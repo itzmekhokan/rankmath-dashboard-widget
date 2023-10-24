@@ -1,0 +1,13 @@
+#rm-graph-widget {
+    .header-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-wrap h4 {
+        font-size: medium;
+        font-weight: 400;
+    }
+    .recharts-responsive-container {
+        border: 1px solid #aaa;
+    }
+}
