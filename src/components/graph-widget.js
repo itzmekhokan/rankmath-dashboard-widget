@@ -1,4 +1,5 @@
 // WordPress dependancies.
+import { __ } from '@wordpress/i18n';
 import { Fragment, useState, useEffect } from '@wordpress/element';
 import { SelectControl } from '@wordpress/components';
 import apiFetch from '@wordpress/api-fetch';
@@ -22,13 +23,13 @@ const GraphWidget = () => {
 	return (
 		<Fragment>
 			<div className='header-wrap'>
-				<h4>Graph Widget</h4>
+				<h4>{__( 'Graph Widget', 'rankmath-dashboard-widget' ) }</h4>
 				<SelectControl 
 					value={ days }
 					options={ [
-						{ label: 'Last 7 Days', value: '7' },
-						{ label: 'Last 15 Days', value: '15' },
-						{ label: 'Last 1 Month', value: '30' },
+						{ label: __( 'Last 7 Days', 'rankmath-dashboard-widget' ), value: '7' },
+						{ label: __( 'Last 15 Days', 'rankmath-dashboard-widget' ), value: '15' },
+						{ label: __( 'Last 1 Month', 'rankmath-dashboard-widget' ), value: '30' },
 					] }
 					onChange={ ( value ) => setDays( value ) }
 				/>
